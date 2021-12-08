@@ -13,5 +13,15 @@ export const getProducts = async (req, res) => {
 };
 
 export const createProduct = (req, res) => {
-  res.send("post creation");
+  const product = req.body;
+
+  const newProduct = new ProductMessage(product)
+
+  try {
+    await newProduct.save();
+
+    res.status(201).json(newProduct);
+  } catch (error) {
+    res.status(409).json({ message: error.message });
+  }
 };
