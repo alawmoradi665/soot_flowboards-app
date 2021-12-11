@@ -86,58 +86,56 @@ const Payment = styled.img`
 
 const Footer = () => {
   return (
-    <Container>
-      <Left>
-        <Logo>LAMA.</Logo>
-        <Desc>
+    <div className="flex">
+      <div className="flex-1 flex-col p-5">
+        <h1>Soot Flowcraft</h1>
+        <p className=" my-8">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which don’t look even slightly believable.
-        </Desc>
-        <SocialContainer>
-          <SocialIcon color="3B5999">
+        </p>
+        <div className="flex">
+          <div className="w-10 h10 rounded-full bg-black text-white flex items-center justify-center mr-10" color="3B5999">
             <Facebook />
-          </SocialIcon>
-          <SocialIcon color="E4405F">
+          </div>
+          <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center mr-10" color="E4405F">
             <Instagram />
-          </SocialIcon>
-          <SocialIcon color="55ACEE">
+          </div>
+          <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center mr-10" color="55ACEE">
             <Twitter />
-          </SocialIcon>
-          <SocialIcon color="E60023">
+          </div>
+          <div className="w-10 h-10 rounded-full bg-black text-white flex items-center justify-center mr-10" color="E60023">
             <Pinterest />
-          </SocialIcon>
-        </SocialContainer>
-      </Left>
-      <Center>
-        <Title>Useful Links</Title>
-        <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
-        </List>
-      </Center>
-      <Right>
-        <Title>Contact</Title>
-        <ContactItem>
+          </div>
+        </div>
+      </div>
+      <div className="flex-1 p-5">
+        <h3 className="mb-6">Useful Links</h3>
+        <ul className="m-0 p-0 list-none flex flex-wrap">
+          <li className=" w-1/2 mb-2">Home</li>
+          <li className=" w-1/2 mb-2">Cart</li>
+          <li className=" w-1/2 mb-2">Products</li>
+          <li className=" w-1/2 mb-2">Accessories</li>
+          <li className=" w-1/2 mb-2">My Account</li>
+          <li className=" w-1/2 mb-2">Order Tracking</li>
+          <li className=" w-1/2 mb-2">Wishlist</li>
+          <li className=" w-1/2 mb-2">Terms</li>
+        </ul>
+      </div>
+      <div className="flex-1 p-5">
+        <h3 className="mb-6">Contact</h3>
+        <div className="mb-5 flex items-center">
           <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
-        </ContactItem>
-        <ContactItem>
+        </div>
+        <div className="mb-5 flex items-center">
           <Phone style={{marginRight:"10px"}}/> +1 234 56 78
-        </ContactItem>
-        <ContactItem>
+        </div>
+        <div className="mb-5 flex items-center">
           <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
-        </ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
-      </Right>
-    </Container>
+        </div>
+        <img className="w-1/2" src="https://i.ibb.co/Qfvn4z6/payment.png" />
+      </div>
+    </div>
   );
 };
 
