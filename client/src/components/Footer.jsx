@@ -86,10 +86,10 @@ const Payment = styled.img`
 
 const Footer = () => {
   return (
-    <div className="flex">
+    <div className="flex bg-black">
       <div className="flex-1 flex-col p-5">
-        <h1>Soot Flowcraft</h1>
-        <p className=" my-8">
+        <h1 className="text-white">Soot Flowcraft</h1>
+        <p className="my-8 text-white">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form, by injected
           humour, or randomised words which don’t look even slightly believable.
@@ -110,27 +110,27 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex-1 p-5">
-        <h3 className="mb-6">Useful Links</h3>
+        <h3 className="mb-6 text-white">Useful Links</h3>
         <ul className="m-0 p-0 list-none flex flex-wrap">
-          <li className=" w-1/2 mb-2">Home</li>
-          <li className=" w-1/2 mb-2">Cart</li>
-          <li className=" w-1/2 mb-2">Products</li>
-          <li className=" w-1/2 mb-2">Accessories</li>
-          <li className=" w-1/2 mb-2">My Account</li>
-          <li className=" w-1/2 mb-2">Order Tracking</li>
-          <li className=" w-1/2 mb-2">Wishlist</li>
-          <li className=" w-1/2 mb-2">Terms</li>
+          <li className=" w-1/2 mb-2 text-white">Home</li>
+          <li className=" w-1/2 mb-2 text-white">Cart</li>
+          <li className=" w-1/2 mb-2 text-white">Products</li>
+          <li className=" w-1/2 mb-2 text-white">Accessories</li>
+          <li className=" w-1/2 mb-2 text-white">My Account</li>
+          <li className=" w-1/2 mb-2 text-white">Order Tracking</li>
+          <li className=" w-1/2 mb-2 text-white">Wishlist</li>
+          <li className=" w-1/2 mb-2 text-white">Terms</li>
         </ul>
       </div>
       <div className="flex-1 p-5">
-        <h3 className="mb-6">Contact</h3>
-        <div className="mb-5 flex items-center">
+        <h3 className="mb-6 text-white">Contact</h3>
+        <div className="mb-5 flex items-center text-white">
           <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
         </div>
-        <div className="mb-5 flex items-center">
+        <div className="mb-5 flex items-center text-white">
           <Phone style={{marginRight:"10px"}}/> +1 234 56 78
         </div>
-        <div className="mb-5 flex items-center">
+        <div className="mb-5 flex items-center text-white">
           <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
         </div>
         <img className="w-1/2" src="https://i.ibb.co/Qfvn4z6/payment.png" />
