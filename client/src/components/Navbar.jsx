@@ -12,7 +12,7 @@ const navigation = {
           id: 'boards',
           name: 'Boards',
           items: [
-            { name: 'Tops', href: '#' },
+            { name: 'All Boards', href: '/products/boards' },
           ],
         },
         {
