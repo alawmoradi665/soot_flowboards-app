@@ -60,15 +60,15 @@ const ProductList = () => {
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          <Select name="color" onChange={handleFilters}>
-            <Option disabled>
-              Color
+          <Select name="colour" onChange={handleFilters}>
+            <Option>
+              Colour
             </Option>
             <Option>light blue</Option>
             <Option>dark blue</Option>
           </Select>
           <Select name="size" onChange={handleFilters}>
-            <Option disabled>
+            <Option>
               Size
             </Option>
             <Option>XS</Option>

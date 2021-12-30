@@ -29,8 +29,7 @@ const Products = ({ cat, filters, sort }) => {
   }, [cat]);
 
   useEffect(() => {
-    cat &&
-      setFilteredProducts(
+    cat && setFilteredProducts(
         products.filter((item) =>
           Object.entries(filters).every(([key, value]) =>
             item[key].includes(value)

@@ -45,7 +45,7 @@ export default function Example() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="bg-white">
+    <div className="bg-black">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="fixed inset-0 flex z-40 lg:hidden" onClose={setOpen}>
@@ -70,11 +70,11 @@ export default function Example() {
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
           >
-            <div className="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
-              <div className="px-4 pt-5 pb-2 flex">
+            <div className="relative md:max-w-xs w-full bg-black shadow-xl pb-12 flex flex-col overflow-y-auto">
+              <div className="px-4 pt-5 pb-4 flex">
                 <button
                   type="button"
-                  className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400"
+                  className="-m-2 p-2 rounded-md inline-flex items-center justify-center text-white md:mr-auto md:ml-0 ml-auto mr-0"
                   onClick={() => setOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
@@ -85,13 +85,13 @@ export default function Example() {
               {/* Links */}
               <Tab.Group as="div" className="mt-2">
                 <div className="border-b border-gray-200">
-                  <Tab.List className="-mb-px flex px-4 space-x-8">
+                  <Tab.List className="-mb-px flex  space-x-8">
                     {navigation.categories.map((category) => (
                       <Tab
                         key={category.name}
                         className={({ selected }) =>
                           classNames(
-                            selected ? 'text-indigo-600 border-indigo-600' : 'text-gray-300 border-transparent',
+                            selected ? 'text-teal border-teal' : 'text-gray-300 border-transparent',
                             'flex-1 whitespace-nowrap py-4 px-1 border-b-2 text-base font-medium'
                           )
                         }
@@ -116,7 +116,7 @@ export default function Example() {
                           >
                             {section.items.map((item) => (
                               <li key={item.name} className="flow-root">
-                                <a href={item.href} className="-m-2 p-2 block text-gray-500">
+                                <a href={item.href} className="-m-2 p-2 block text-gray-400">
                                   {item.name}
                                 </a>
                               </li>
@@ -141,27 +141,15 @@ export default function Example() {
 
               <div className="border-t border-gray-200 py-6 px-4 space-y-6">
                 <div className="flow-root">
-                  <a href="#" className="-m-2 p-2 block font-medium text-gray-300">
+                  <a href="/login" className="-m-2 p-2 block font-medium text-gray-300">
                     Sign in
                   </a>
                 </div>
                 <div className="flow-root">
-                  <a href="#" className="-m-2 p-2 block font-medium text-gray-300">
+                  <a href="/register" className="-m-2 p-2 block font-medium text-gray-300">
                     Create account
                   </a>
                 </div>
-              </div>
-
-              <div className="border-t border-gray-200 py-6 px-4">
-                <a href="#" className="-m-2 p-2 flex items-center">
-                  <img
-                    src="https://tailwindui.com/img/flags/flag-canada.svg"
-                    alt=""
-                    className="w-5 h-auto block flex-shrink-0"
-                  />
-                  <span className="ml-3 block text-base font-medium text-gray-300">CAD</span>
-                  <span className="sr-only">, change currency</span>
-                </a>
               </div>
             </div>
           </Transition.Child>
@@ -173,15 +161,6 @@ export default function Example() {
         <nav aria-label="Top" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="">
             <div className="h-16 flex items-center">
-              <button
-                type="button"
-                className="bg-white p-2 rounded-md text-gray-400 lg:hidden"
-                onClick={() => setOpen(true)}
-              >
-                <span className="sr-only">Open menu</span>
-                <MenuIcon className="h-6 w-6" aria-hidden="true" />
-              </button>
-
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
@@ -276,11 +255,11 @@ export default function Example() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <a href="#" className="duration-300 text-sm font-medium text-white hover:text-gray-400">
+                  <a href="/login" className="duration-300 text-sm font-medium text-white hover:text-gray-400">
                     Sign in
                   </a>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <a href="#" className="duration-300 text-sm font-medium text-white hover:text-gray-400">
+                  <a href="/register" className="duration-300 text-sm font-medium text-white hover:text-gray-400">
                     Create account
                   </a>
                 </div>
@@ -305,6 +284,15 @@ export default function Example() {
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
                 </div>
+
+                <button
+                  type="button"
+                  className="bg-black p-2 rounded-md text-white lg:hidden float-right ml-6"
+                  onClick={() => setOpen(true)}
+                >
+                  <span className="sr-only">Open menu</span>
+                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                </button>
               </div>
             </div>
           </div>
