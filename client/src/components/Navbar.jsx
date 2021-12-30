@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { MenuIcon, SearchIcon, ShoppingBagIcon, XIcon } from '@heroicons/react/outline'
+import { useSelector } from "react-redux";
 
 const navigation = {
   categories: [
@@ -43,6 +44,8 @@ function classNames(...classes) {
 
 export default function Example() {
   const [open, setOpen] = useState(false);
+
+  const quantity = useSelector(state => state.cart.quantity);
 
   return (
     <div className="bg-black">
@@ -275,12 +278,12 @@ export default function Example() {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 p-2 flex items-center">
+                  <a href="/cart" className="group -m-2 p-2 flex items-center">
                     <ShoppingBagIcon
                       className="duration-300 flex-shrink-0 h-6 w-6 text-white group-hover:text-gray-400"
                       aria-hidden="true"
                     />
-                    <span className="duration-300 ml-2 text-sm font-medium text-white group-hover:text-gray-400">0</span>
+                    <span className="duration-300 ml-2 text-sm font-medium text-white group-hover:text-gray-400">{quantity}</span>
                     <span className="sr-only">items in cart, view bag</span>
                   </a>
                 </div>

@@ -6,8 +6,8 @@ import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { publicRequest } from "../requestMethods";
-// import { addProduct } from "../redux/cartRedux";
-// import { useDispatch } from "react-redux";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const FilterColor = styled.div`
   width: 20px;
@@ -46,7 +46,7 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -66,11 +66,11 @@ const Product = () => {
     }
   };
 
-  // const handleClick = () => {
-  //   dispatch(
-  //     addProduct({ ...product, quantity, color, size })
-  //   );
-  // };
+  const handleClick = () => {
+    dispatch(
+      addProduct({ ...product, quantity, color, size })
+    );
+  };
 
   return (
     <div>
@@ -92,7 +92,7 @@ const Product = () => {
               <div className="flex items-center justify-center">
                 <p className="text-xl font-medium">Color</p>
                 {product.color?.map((c) => (
-                  <FilterColor color={c} key={c} onClick={() => setColor(c)} />
+                  <FilterColor color={c} key={c} onClick={() => setColor(c)} className="w-4 h-4" />
                 ))}
               </div>
 
@@ -113,7 +113,7 @@ const Product = () => {
             </div>
 
             <div className="">
-              <button className="w-full rounded-lg bg-teal h-12 text-white font-semibold duration-300 hover:opacity-75">ADD TO CART</button>
+              <button className="w-full rounded-lg bg-teal h-12 text-white font-semibold duration-300 hover:opacity-75" onClick={handleClick}>ADD TO CART</button>
             </div>
           </div>
         </div>
