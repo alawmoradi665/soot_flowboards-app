@@ -49,13 +49,13 @@ const Footer = () => {
       <div className="flex-1 p-5">
         <h3 className="mb-6 text-white">Contact</h3>
         <div className="mb-5 flex items-center text-white">
-          <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+          <Room className="mr-3"/> 622 Dixie Path , South Tobinchester 98336
         </div>
         <div className="mb-5 flex items-center text-white">
-          <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+          <Phone className="mr-3"/> +1 234 56 78
         </div>
         <div className="mb-5 flex items-center text-white">
-          <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+          <MailOutline className="mr-3" /> contact@lama.dev
         </div>
         <img className="w-1/2" src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </div>
