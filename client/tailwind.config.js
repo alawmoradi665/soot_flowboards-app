@@ -1,6 +1,7 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{js,jsx,,ts,tsx}",
+  ],
   theme: {
     extend: {
       colors: {
@@ -8,10 +9,10 @@ module.exports = {
         white: "#FFFEF9",
         teal: "#009B9E",
       },
+      backgroundImage: {
+        'riding-board': "url('img/soot01.jpg')"
+      }
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 }
