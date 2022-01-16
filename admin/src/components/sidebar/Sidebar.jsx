@@ -22,7 +22,11 @@ export default function Sidebar() {
                         </li>
                         <li className="sidebarListItem">
                             <AttachMoney className="sidebarIcon" />
-                            Transactions
+                            Orders
+                        </li>
+                        <li className="sidebarListItem">
+                            <AttachMoney className="sidebarIcon" />
+                            Custom Requests
                         </li>
                     </ul>
                 </div>
