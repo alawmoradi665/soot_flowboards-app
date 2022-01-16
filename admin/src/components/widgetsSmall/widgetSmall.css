@@ -7,7 +7,7 @@
 }
 
 .widgetTitle {
-    font-size: 32px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -47,8 +47,15 @@
     border-radius: 10px;
     padding: 7px 10px;
     cursor: pointer;
+    color: rgba(56, 56, 56, 0.788);
+    background-color: rgba(245, 244, 244, 0.933);
 }
 
 .widgetButton.active, .widgetButton:hover {
     background-color: rgb(194, 192, 192);
+}
+
+.Icon{
+    font-size: 16px !important;
+    margin-right: 7px;
 }

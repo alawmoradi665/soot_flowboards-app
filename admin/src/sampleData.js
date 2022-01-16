@@ -1,27 +1,27 @@
 export const userData = [
     {
       name: 'August',
-        sales: 17,
+        sales: 7,
       },
     {
       name: 'September',
-        sales: 26,
+        sales: 8,
       },
     {
       name: 'October',
-      sales: 40,
+      sales: 12,
     },
     {
       name: 'November',
-      sales: 35,
+      sales: 12,
     },
     {
       name: 'December',
-      sales: 70,
+      sales: 16,
     },
     {
       name: 'January',
-      sales: 64,
+      sales: 14,
     },
 ];
 
