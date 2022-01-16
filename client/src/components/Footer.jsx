@@ -15,7 +15,7 @@ import { Link } from "react-router-dom"
 const Container = styled.div`
 `;
 
-const Left = styled.div`
+const Right = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@ const SocialIcon = styled.div`
   margin-right: 20px;
 `;
 
-const Center = styled.div`
+const Left = styled.div`
   flex: 1;
   padding: 20px;
 `;
@@ -53,17 +53,13 @@ const Title = styled.h3`
 const List = styled.ul`
   margin: 0;
   padding: 0;
-  /* list-style: none; */
-  /* display: flex; */
-  /* flex-wrap: wrap; */
 `;
 
 const ListItem = styled.li`
-  /* width: 50%; */
   margin-bottom: 10px;
 `;
 
-const Right = styled.div`
+const Center = styled.div`
   flex: 1;
   padding: 20px;
   flex-direction: row;
@@ -75,9 +71,6 @@ const ContactItem = styled.div`
   align-items: center;
 `;
 
-// const Payment = styled.img`
-//     width: 50%;
-// `;
 
 const Top = styled.div`
 `;
@@ -94,24 +87,7 @@ const Footer = () => {
   return (
     <Container className="">
       <Top className="flex flex-col sm:flex-row">
-      <Left className="">
-        <Logo><strong>Follow us on Instagram</strong></Logo>
-        <SocialContainer className="mt-2">
-          {/* <SocialIcon color="3B5999">
-            <Facebook />
-          </SocialIcon> */}
-          <SocialIcon className="hover:bg-black" color="E4405F">
-            <SocialLink href="https://www.instagram.com/soot_flowcrafts/" rel="external" target="_blank">
-              <Instagram />
-            </SocialLink>
-          </SocialIcon>
-          {/* <SocialIcon color="55ACEE">
-            <Twitter />
-          </SocialIcon> */}
-        </SocialContainer>
-      </Left>
-        <Center>
-          {/* <Title>Useful Links</Title> */}
+        <Left>
           <List>
             <Link to="/">
               <ListItem>Home</ListItem>
@@ -132,24 +108,27 @@ const Footer = () => {
               <ListItem>Create an Account</ListItem>
             </Link>
           </List>
-        </Center>
-      <Right>
+        </Left>
+      <Center>
         <Title><strong>Contact Us</strong></Title>
-        {/* <ContactItem>
-          <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
-          </ContactItem>
-          <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +1 234 56 78
-        </ContactItem> */}
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> sootflowcrafts@test.com
+          <MailOutline style={{marginRight:"10px"}} /> <a href="mailto:sootflowcrafts@test.com" rel="external" target="_blank">sootflowcrafts@test.com</a>
         </ContactItem>
-        {/* <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" /> */}
-        <Bottom className="flex  mb-5 mt-10">
-          <CopyrightOutlined className= "mr-3"/> Søøt Flowcrafts
-        </Bottom>
+      </Center>
+      <Right>
+        <Logo><strong>Follow us on Instagram</strong></Logo>
+        <SocialContainer className="mt-2">
+          <SocialIcon className="hover:bg-black" color="E4405F">
+            <SocialLink href="https://www.instagram.com/soot_flowcrafts/" rel="external" target="_blank">
+              <Instagram />
+            </SocialLink>
+          </SocialIcon>
+        </SocialContainer>
       </Right>
       </Top>
+          <Bottom className="flex  mb-5 mt-1 justify-start sm:justify-center">
+            <CopyrightOutlined className= "ml-4 mr-3 sm:ml-0"/> Søøt Flowcrafts
+          </Bottom>
     </Container>
   );
 };
