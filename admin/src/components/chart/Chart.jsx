@@ -13,19 +13,19 @@ import {
 const data = [
     {
       name: 'October',
-      sales: 4000,
+      sales: 40,
     },
     {
       name: 'November',
-      sales: 3000,
+      sales: 35,
     },
     {
       name: 'December',
-      sales: 2000,
+      sales: 70,
     },
     {
       name: 'January',
-      sales: 2780,
+      sales: 64,
     },
 ];
 
@@ -37,6 +37,8 @@ export default function Chart() {
                 <LineChart data={data}>
                     <XAxis dataKey="name"/>
                     <Line type="monotone" dataKey="sales" />
+                    <Tooltip/>
+                    <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5"/>
                 </LineChart>
             </ResponsiveContainer>
         </div>
