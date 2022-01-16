@@ -1,7 +1,7 @@
 import React from "react";
 import "./topbar.css";
 import {NotificationsNone, Language, Settings,} from "@material-ui/icons";
-import "../../soot01.jpg";
+import img from "../../soot01.jpg";
 
 export default function Topbar() {
   return (
@@ -23,7 +23,7 @@ export default function Topbar() {
             <Settings />
           </div>
           {/* display image to be linked below */}
-          <img src="../soot01.jpg" alt="display" className="profileIcon" />
+          <img src={img} alt="display" className="profileIcon" />
         </div>
       </div>
     </div>
