@@ -3,16 +3,16 @@ import { login } from "../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const { isFetching, error } = useSelector((state) => state.user);
 
   const handleClick = (e) => {
     e.preventDefault();
-    login(dispatch, { username, password });
+    login(dispatch, { email, password });
   };
-  
+
   return (
     <div className="w-screen h-screen bg-riding-board bg-cover flex items-center justify-center">
       <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -26,8 +26,8 @@ const Login = () => {
             <input type="hidden" name="remember" value="true" />
             <div class="rounded-md shadow-sm -space-y-px">
               <div>
-                <label class="sr-only">Username</label>
-                <input type="text" onChange={(e) => setUsername(e.target.value)} required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-teal focus:border-teal focus:z-10 sm:text-sm" placeholder="Username" />
+                <label class="sr-only">Email</label>
+                <input type="text" onChange={(e) => setEmail(e.target.value)} required class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-teal focus:border-teal focus:z-10 sm:text-sm" placeholder="Username" />
               </div>
               <div>
                 <label class="sr-only">Password</label>
