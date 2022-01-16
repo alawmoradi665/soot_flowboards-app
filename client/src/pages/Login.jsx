@@ -12,6 +12,7 @@ const Login = () => {
     e.preventDefault();
     login(dispatch, { username, password });
   };
+  
   return (
     <div className="w-screen h-screen bg-riding-board bg-cover flex items-center justify-center">
       <div class="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
