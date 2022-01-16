@@ -5,7 +5,7 @@ import Products from "../components/Products";
 import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
 import { useState } from "react";
 
 const Container = styled.div``;
@@ -56,21 +56,21 @@ const ProductList = () => {
     <Container>
       <Navbar />
       <Announcement />
-      <Title className="capitalize">{cat}</Title>
+      <Title>{cat}</Title>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
-          <Select name="colour" onChange={handleFilters}>
-            <Option>
-              Colour
-            </Option>
+          <Select name="color" onChange={handleFilters}>
+            <Option disabled>Color</Option>
+            <Option>white</Option>
+            <Option>black</Option>
+            <Option>red</Option>
             <Option>blue</Option>
-            <Option>dark blue</Option>
+            <Option>yellow</Option>
+            <Option>green</Option>
           </Select>
           <Select name="size" onChange={handleFilters}>
-            <Option>
-              Size
-            </Option>
+            <Option disabled>Size</Option>
             <Option>XS</Option>
             <Option>S</Option>
             <Option>M</Option>
@@ -80,7 +80,7 @@ const ProductList = () => {
         </Filter>
         <Filter>
           <FilterText>Sort Products:</FilterText>
-          <Select onChange={e => setSort(e.target.value)}>
+          <Select onChange={(e) => setSort(e.target.value)}>
             <Option value="newest">Newest</Option>
             <Option value="asc">Price (asc)</Option>
             <Option value="desc">Price (desc)</Option>

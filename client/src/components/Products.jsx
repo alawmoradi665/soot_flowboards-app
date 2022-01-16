@@ -1,13 +1,14 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
+import { popularProducts } from "../data";
 import Product from "./Product";
-import { useState, useEffect } from "react";
 import axios from "axios";
 
 const Container = styled.div`
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
 
 const Products = ({ cat, filters, sort }) => {
@@ -29,7 +30,8 @@ const Products = ({ cat, filters, sort }) => {
   }, [cat]);
 
   useEffect(() => {
-    cat && setFilteredProducts(
+    cat &&
+      setFilteredProducts(
         products.filter((item) =>
           Object.entries(filters).every(([key, value]) =>
             item[key].includes(value)
@@ -64,6 +66,5 @@ const Products = ({ cat, filters, sort }) => {
     </Container>
   );
 };
-
 
 export default Products;
