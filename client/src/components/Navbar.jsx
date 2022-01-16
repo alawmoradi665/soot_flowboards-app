@@ -166,7 +166,7 @@ export default function Example() {
             <div className="h-16 flex items-center">
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
+                <a href="/">
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto"
