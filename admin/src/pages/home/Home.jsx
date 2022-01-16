@@ -1,6 +1,6 @@
-import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo"
-import "./home.css"
-import Chart from "../../components/chart/Chart"
+import FeaturedInfo from "../../components/featuredInfo/FeaturedInfo";
+import "./home.css";
+import Chart from "../../components/chart/Chart";
 
 export default function Home() {
     return (

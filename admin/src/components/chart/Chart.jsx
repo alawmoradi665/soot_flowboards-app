@@ -1,25 +1,44 @@
 import "./chart.css";
+import React, { PureComponent } from 'react';
 import {
     LineChart,
     Line,
     XAxis,
+    Legend,
     CartesianGrid,
     Tooltip,
     ResponsiveContainer,
   } from "recharts";
 
-export default function Chart({title, data, dataKey, grid}) {
+const data = [
+    {
+      name: 'October',
+      sales: 4000,
+    },
+    {
+      name: 'November',
+      sales: 3000,
+    },
+    {
+      name: 'December',
+      sales: 2000,
+    },
+    {
+      name: 'January',
+      sales: 2780,
+    },
+];
+
+export default function Chart() {
     return (
         <div className="chart">
-           <h3 className="chartTitle">Sales Analytics</h3> 
-           <ResponsiveContainer width="100%" aspect={4 / 1}>
+            <h3 className="chartTitle">Sales Analytics</h3>
+            <ResponsiveContainer width="100%" aspect={4 / 1}>
                 <LineChart data={data}>
-                <XAxis dataKey="name" stroke="#5550bd" />
-                <Line type="monotone" dataKey={dataKey} stroke="#5550bd" />
-                <Tooltip />
-                {grid && <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />}
+                    <XAxis dataKey="name"/>
+                    <Line type="monotone" dataKey="sales" />
                 </LineChart>
             </ResponsiveContainer>
         </div>
-    )
+    );
 }
