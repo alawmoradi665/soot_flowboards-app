@@ -1,31 +1,22 @@
 import {
-  Facebook,
   Instagram,
   MailOutline,
-  Phone,
-  Pinterest,
-  Room,
-  Twitter,
+  CopyrightOutlined
 } from "@material-ui/icons";
 import styled from "styled-components";
-import { mobile } from "../responsive";
+import { Link } from "react-router-dom"
 
 const Container = styled.div`
-  display: flex;
-  ${mobile({ flexDirection: "column" })}
 `;
 
-const Left = styled.div`
+const Right = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   padding: 20px;
 `;
 
-const Logo = styled.h1``;
-
-const Desc = styled.p`
-  margin: 20px 0px;
+const Logo = styled.h1`
 `;
 
 const SocialContainer = styled.div`
@@ -44,10 +35,9 @@ const SocialIcon = styled.div`
   margin-right: 20px;
 `;
 
-const Center = styled.div`
+const Left = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ display: "none" })}
 `;
 
 const Title = styled.h3`
@@ -57,21 +47,16 @@ const Title = styled.h3`
 const List = styled.ul`
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
 `;
 
 const ListItem = styled.li`
-  width: 50%;
   margin-bottom: 10px;
 `;
 
-const Right = styled.div`
+const Center = styled.div`
   flex: 1;
   padding: 20px;
-  ${mobile({ backgroundColor: "#fff8f8" })}
-
+  flex-direction: row;
 `;
 
 const ContactItem = styled.div`
@@ -80,63 +65,64 @@ const ContactItem = styled.div`
   align-items: center;
 `;
 
-const Payment = styled.img`
-    width: 50%;
+
+const Top = styled.div`
+`;
+
+const Bottom = styled.div`
+  align-self: flex-start;
+  flex-direction: row;
+`;
+
+const SocialLink = styled.a`
 `;
 
 const Footer = () => {
   return (
-    <Container>
-      <Left>
-        <Logo>LAMA.</Logo>
-        <Desc>
-          There are many variations of passages of Lorem Ipsum available, but
-          the majority have suffered alteration in some form, by injected
-          humour, or randomised words which don’t look even slightly believable.
-        </Desc>
-        <SocialContainer>
-          <SocialIcon color="3B5999">
-            <Facebook />
-          </SocialIcon>
-          <SocialIcon color="E4405F">
-            <Instagram />
-          </SocialIcon>
-          <SocialIcon color="55ACEE">
-            <Twitter />
-          </SocialIcon>
-          <SocialIcon color="E60023">
-            <Pinterest />
-          </SocialIcon>
-        </SocialContainer>
-      </Left>
+    <Container className="">
+      <Top className="flex flex-col sm:flex-row">
+        <Left>
+          <List>
+            <Link to="/">
+              <ListItem>Home</ListItem>
+            </Link>
+            <Link to="/cart">
+              <ListItem>Cart</ListItem>
+            </Link>
+            <Link to="/products">
+              <ListItem>Products</ListItem>
+            </Link>
+            <Link to="/vision">
+              <ListItem>Vision</ListItem>
+            </Link>
+            <Link to="/login">
+            <ListItem>Sign in</ListItem>
+            </Link>
+            <Link to="/register">
+              <ListItem>Create an Account</ListItem>
+            </Link>
+          </List>
+        </Left>
       <Center>
-        <Title>Useful Links</Title>
-        <List>
-          <ListItem>Home</ListItem>
-          <ListItem>Cart</ListItem>
-          <ListItem>Man Fashion</ListItem>
-          <ListItem>Woman Fashion</ListItem>
-          <ListItem>Accessories</ListItem>
-          <ListItem>My Account</ListItem>
-          <ListItem>Order Tracking</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Wishlist</ListItem>
-          <ListItem>Terms</ListItem>
-        </List>
+        <Title><strong>Contact Us</strong></Title>
+        <ContactItem>
+          <MailOutline style={{marginRight:"10px"}} /> <a href="mailto:sootflowcrafts@test.com" rel="external" target="_blank">sootflowcrafts@test.com</a>
+        </ContactItem>
       </Center>
       <Right>
-        <Title>Contact</Title>
-        <ContactItem>
-          <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
-        </ContactItem>
-        <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +1 234 56 78
-        </ContactItem>
-        <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
-        </ContactItem>
-        <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
+        <Logo><strong>Follow us on Instagram</strong></Logo>
+        <SocialContainer className="mt-2">
+          <SocialIcon className="hover:bg-black" color="E4405F">
+            <SocialLink href="https://www.instagram.com/soot_flowcrafts/" rel="external" target="_blank">
+              <Instagram />
+            </SocialLink>
+          </SocialIcon>
+        </SocialContainer>
       </Right>
+      </Top>
+          <Bottom className="flex  mb-5 mt-1 justify-start sm:justify-center">
+            <CopyrightOutlined className= "ml-4 mr-3 sm:ml-0"/> Søøt Flowcrafts
+          </Bottom>
     </Container>
   );
 };
