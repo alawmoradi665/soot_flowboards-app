@@ -1,45 +1,45 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://i.ibb.co/XsdmR2c/1.png",
-      title: "SUMMER SALE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "f5fafd",
+      img: "https://images.pexels.com/photos/10879911/pexels-photo-10879911.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      title: "HAND MADE",
+      desc: "With years of experience and passion.",
+      bg: "f5fafd"
     },
     {
       id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
+      img: "https://images.pexels.com/photos/10879921/pexels-photo-10879921.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      title: "",
+      desc: "Here at SooT Flowcraft we believe in the finer details of board making.",
+      bg: "f5fafd",
     },
     {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
-      title: "LOUNGEWEAR LOVE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fbf0f4",
+      img: "https://images.pexels.com/photos/10879937/pexels-photo-10879937.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      title: "WHAT'S YOUR VISION?",
+      desc: "Request your custom board below.",
+      bg: "f5fafd",
     },
   ];
 
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "SHIRT STYLE!",
-      cat:"women"
+      img: "https://images.pexels.com/photos/10880050/pexels-photo-10880050.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      title: "LOGS",
+      cat:"logs"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      title: "LOUNGEWEAR LOVE",
-      cat:"coat"
+      img: "https://images.pexels.com/photos/10880049/pexels-photo-10880049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      title: "TWIN FINS",
+      cat:"twins"
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-      title: "LIGHT JACKETS",
-      cat:"jeans"
+      img: "https://images.pexels.com/photos/10880058/pexels-photo-10880058.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      title: "SINGLE FINS",
+      cat:"singles"
     },
   ];
 
