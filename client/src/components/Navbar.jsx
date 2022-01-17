@@ -144,8 +144,18 @@ export default function Example() {
                 ))}
               </div>
 
-              {}
-              
+              <div className="border-t border-gray-200 py-6 px-4 space-y-6">
+                <div className="flow-root">
+                  <a href="/login" className="-m-2 p-2 block font-medium text-gray-300">
+                    Sign in
+                  </a>
+                </div>
+                <div className="flow-root">
+                  <a href="/register" className="-m-2 p-2 block font-medium text-gray-300">
+                    Create account
+                  </a>
+                </div>
+              </div>
             </div>
           </Transition.Child>
         </Dialog>
@@ -250,13 +260,21 @@ export default function Example() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                  {user ? 
+                  <p className='hidden'></p> : 
+
                   <a href="/login" className="duration-300 text-sm font-medium text-white hover:text-gray-400">
                     Sign in
                   </a>
-                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
+                  }
+
+                  {user ? <p className='hidden'></p> :
+                  <span className="h-6 w-px bg-gray-200" aria-hidden="true" />}
+
+                  {user ? <p className='hidden'></p> :
                   <a href="/register" className="duration-300 text-sm font-medium text-white hover:text-gray-400">
                     Create account
-                  </a>
+                  </a>}
                 </div>
 
                 {/* Search */}
