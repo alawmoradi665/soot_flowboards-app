@@ -47,6 +47,8 @@ export default function Example() {
 
   const quantity = useSelector(state => state.cart.quantity);
 
+  const user = useSelector((state) => state.user.currentUser);
+
   return (
     <div className="bg-black">
       {/* Mobile menu */}
@@ -142,18 +144,8 @@ export default function Example() {
                 ))}
               </div>
 
-              <div className="border-t border-gray-200 py-6 px-4 space-y-6">
-                <div className="flow-root">
-                  <a href="/login" className="-m-2 p-2 block font-medium text-gray-300">
-                    Sign in
-                  </a>
-                </div>
-                <div className="flow-root">
-                  <a href="/register" className="-m-2 p-2 block font-medium text-gray-300">
-                    Create account
-                  </a>
-                </div>
-              </div>
+              {}
+              
             </div>
           </Transition.Child>
         </Dialog>

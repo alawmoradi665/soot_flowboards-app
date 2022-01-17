@@ -43,7 +43,7 @@ router.post("/login", async (req, res) => {
             isAdmin: user.isAdmin,
         },
         process.env.JWT_SEC,
-        { expiresIn: "1d" }
+        { expiresIn: "15s" }
         );
 
         const { password, ...others } = user._doc;
@@ -52,6 +52,15 @@ router.post("/login", async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
+
+// LOGOUT
+router.post("/logout", async (req, res) => {
+  try {
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
