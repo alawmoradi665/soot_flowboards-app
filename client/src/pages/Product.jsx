@@ -1,9 +1,8 @@
 import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
+import ContactUs from "../components/ContactUs";
 import { mobile } from "../responsive";
 import { useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -19,13 +18,9 @@ const Wrapper = styled.div`
   ${mobile({ padding: "10px", flexDirection: "column" })}
 `;
 
-const ImgContainer = styled.div`
-  flex: 1;
-`;
-
 const Image = styled.img`
-  width: 100%;
-  height: 90vh;
+  width: 70%;
+  height: auto;
   object-fit: cover;
   ${mobile({ height: "40vh" })}
 `;
@@ -155,42 +150,36 @@ const Product = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
-      <Wrapper>
-        <ImgContainer>
-          <Image src={product.img} />
-        </ImgContainer>
+      <div className="grid grid-cols-1 py-10 md:py-20 md:grid-cols-2">
+        <div className="flex w-3/4 md:w-1/2 md:w-full mx-auto pb-5">
+          <img src={product.img} className="w-full md:w-3/4 h-auto mx-auto" />
+        </div>
         <InfoContainer>
           <Title>{product.title}</Title>
-          <Desc>{product.desc}</Desc>
           <Price>$ {product.price}</Price>
+          <Desc>{product.description}</Desc>
           <FilterContainer>
             <Filter>
-              <FilterTitle>Color</FilterTitle>
-              {product.color?.map((c) => (
-                <FilterColor color={c} key={c} onClick={() => setColor(c)} />
-              ))}
-            </Filter>
-            <Filter>
               <FilterTitle>Size</FilterTitle>
-              <FilterSize onChange={(e) => setSize(e.target.value)}>
+              <FilterSize className="cursor-pointer mr-10" onChange={(e) => setSize(e.target.value)}>
                 {product.size?.map((s) => (
                   <FilterSizeOption key={s}>{s}</FilterSizeOption>
                 ))}
               </FilterSize>
+
+              <AmountContainer>
+              <Remove className="cursor-pointer" onClick={() => handleQuantity("dec")} />
+              <Amount>{quantity}</Amount>
+              <Add className="cursor-pointer" onClick={() => handleQuantity("inc")} />
+            </AmountContainer>
             </Filter>
           </FilterContainer>
-          <AddContainer>
-            <AmountContainer>
-              <Remove onClick={() => handleQuantity("dec")} />
-              <Amount>{quantity}</Amount>
-              <Add onClick={() => handleQuantity("inc")} />
-            </AmountContainer>
-            <Button onClick={handleClick}>ADD TO CART</Button>
-          </AddContainer>
+          <div>
+            <a className="w-full block bg-teal text-center text-white font-semibold py-3 cursor-pointer duration-300 hover:bg-black" onClick={handleClick}>ADD TO CART</a>
+          </div>
         </InfoContainer>
-      </Wrapper>
-      <Newsletter />
+      </div>
+      <ContactUs />
       <Footer />
     </Container>
   );

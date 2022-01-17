@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import Announcement from "../components/Announcement";
 import Products from "../components/Products";
-import Newsletter from "../components/Newsletter";
+import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
 import { mobile } from "../responsive";
 import { useLocation } from "react-router";
@@ -56,7 +56,7 @@ const ProductList = () => {
     <Container>
       <Navbar />
       <Announcement />
-      <Title>{cat}</Title>
+      <h2 className="p-5 text-3xl font-semibold capitalize">{cat}</h2>
       <FilterContainer>
         <Filter>
           <FilterText>Filter Products:</FilterText>
@@ -88,7 +88,7 @@ const ProductList = () => {
         </Filter>
       </FilterContainer>
       <Products cat={cat} filters={filters} sort={sort} />
-      <Newsletter />
+      <ContactUs />
       <Footer />
     </Container>
   );

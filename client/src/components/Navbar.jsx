@@ -16,20 +16,20 @@ const navigation = {
             { name: 'All Boards', href: '/products/boards' },
           ],
         },
-        {
-          id: 'accessories',
-          name: 'Accessories',
-          items: [
-            { name: 'Watches', href: '#' },
-          ],
-        },
-        {
-          id: 'brands',
-          name: 'Brands',
-          items: [
-            { name: 'Full Nelson', href: '#' },
-          ],
-        },
+        // {
+        //   id: 'accessories',
+        //   name: 'Accessories',
+        //   items: [
+        //     { name: 'Watches', href: '#' },
+        //   ],
+        // },
+        // {
+        //   id: 'brands',
+        //   name: 'Brands',
+        //   items: [
+        //     { name: 'Full Nelson', href: '#' },
+        //   ],
+        // },
       ],
     },
   ],
@@ -277,14 +277,14 @@ export default function Example() {
                   </a>}
                 </div>
 
-                {/* Search */}
+                {/* Search
                 <div className="flex lg:ml-6">
                   <label for="searchModal" className="duration-300 p-2 text-white hover:text-gray-400">
                     <span className="sr-only">Search</span>
                     <SearchIcon className="w-6 h-6 search-icon" aria-hidden="true" id="search-toggle" />
                   </label>
                   <input type='checkbox' id='searchModal' className='hidden' />
-                </div>
+                </div> */}
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">

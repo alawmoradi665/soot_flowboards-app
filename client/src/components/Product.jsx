@@ -72,7 +72,8 @@ const Product = ({ item }) => {
     <Container>
       <Circle />
       <Image src={item.img} />
-      <Info>
+      <Link to={`/product/${item._id}`}>
+        <Info>
         <Icon>
           <ShoppingCartOutlined />
         </Icon>
@@ -85,6 +86,7 @@ const Product = ({ item }) => {
           <FavoriteBorderOutlined />
         </Icon>
       </Info>
+      </Link>
     </Container>
   );
 };

@@ -17,8 +17,8 @@ export default function ContactUs() {
 
 
     return(
-        <div>
-            <div className="w-screen h-screen bg-riding-board bg-cover flex items-center justify-center">
+        <div className="w-full">
+            <div className="h-screen bg-riding-board bg-cover flex items-center justify-center">
                 <form onSubmit={sendEmail}>
                     <div>
                         <h1 class="text-4xl font-extrabold text-white">Custom SooT</h1>
