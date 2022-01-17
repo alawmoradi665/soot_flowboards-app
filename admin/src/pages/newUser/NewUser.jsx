@@ -33,7 +33,7 @@ export default function NewUser() {
                     </select>
                 </div>
                 <div className="newUserSubmit">
-                    <button className="newUserButton">Update</button>
+                    <button className="newUserButton">Create</button>
                 </div>
             </form>
         </div>

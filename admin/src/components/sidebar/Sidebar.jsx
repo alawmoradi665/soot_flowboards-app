@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import {LineStyle, Timeline, TrendingUp, AttachMoney, PermIdentity} from "@material-ui/icons";
+import {LineStyle, Timeline, TrendingUp, AttachMoney, PermIdentity, Add} from "@material-ui/icons";
 import { Link } from "react-router-dom";
 
 export default function Sidebar() {
@@ -21,22 +21,16 @@ export default function Sidebar() {
                             Products
                         </li>
                         </Link>
-                        <Link to="/analytics" className="link">
+                        <Link to="/newProduct" className="link">
                         <li className="sidebarListItem">
-                            <TrendingUp className="sidebarIcon" />
-                            Analytics
+                            <Add className="sidebarIcon" />
+                            Add Products
                         </li>
                         </Link>
                         <Link to="orders" className="link">
                         <li className="sidebarListItem">
                             <AttachMoney className="sidebarIcon" />
                             Orders
-                        </li>
-                        </Link>
-                        <Link to="/requests" className="link">
-                        <li className="sidebarListItem">
-                            <AttachMoney className="sidebarIcon" />
-                            Custom Requests
                         </li>
                         </Link>
                     </ul>

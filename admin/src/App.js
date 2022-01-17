@@ -7,9 +7,9 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import User from "./pages/user/User";
 import NewUser from "./pages/newUser/NewUser";
 import ProductList from "./pages/products/ProductList";
-import Analytics from "./pages/analytics/Analytics";
 import Orders from "./pages/orders/Orders";
-import CustomRequests from "./pages/requests/CustomRequests";
+import CustomRequests from "./pages/newProduct/NewProduct";
+import Product from "./pages/product/Product";
 
 function App() {
   return (
@@ -34,13 +34,10 @@ function App() {
             <ProductList />
           </Route>
           <Route path="/product/:productId">
-            <ProductList />
+            <Product />
           </Route>
           <Route path="/newproduct">
-            <ProductList />
-          </Route>
-          <Route path="/analytics">
-            <Analytics />
+            <Product />
           </Route>
           <Route path="/orders">
             <Orders />
