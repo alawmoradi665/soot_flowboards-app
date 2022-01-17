@@ -103,7 +103,7 @@ const Footer = () => {
             <Link to="/vision">
               <ListItem>Vision</ListItem>
             </Link>
-            {user ? <Redirect to="/" /> : <Link to="/login">Login</Link>}
+            {/* {user ? <Redirect to="/" /> : <Link to="/login">Login</Link>} */}
             <Link to="/register">
               <ListItem>Create an Account</ListItem>
             </Link>
