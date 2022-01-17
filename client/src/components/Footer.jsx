@@ -4,7 +4,14 @@ import {
   CopyrightOutlined
 } from "@material-ui/icons";
 import styled from "styled-components";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Container = styled.div`
 `;
@@ -78,6 +85,7 @@ const SocialLink = styled.a`
 `;
 
 const Footer = () => {
+  const user = useSelector((state) => state.user.currentUser);
   return (
     <Container className="">
       <Top className="flex flex-col sm:flex-row">
@@ -95,9 +103,7 @@ const Footer = () => {
             <Link to="/vision">
               <ListItem>Vision</ListItem>
             </Link>
-            <Link to="/login">
-            <ListItem>Sign in</ListItem>
-            </Link>
+            {user ? <Redirect to="/" /> : <Link to="/login">Login</Link>}
             <Link to="/register">
               <ListItem>Create an Account</ListItem>
             </Link>
