@@ -3,14 +3,14 @@
     height: calc(100vh - 50px);
     /* width: 20%; */
     /* background-color: rgb(204, 204, 204); */
-    background-color: rgb(243, 237, 237);
+    background-color: rgba(199, 216, 216, 0.562);
     position: sticky;
     top: 50px;
 }
 
 .sidebarWrapper{
     padding: 20px;
-    color: #555;
+    color: rgb(8, 51, 54);
 }
 
 .sidebarMenu{
