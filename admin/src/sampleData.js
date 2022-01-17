@@ -1,3 +1,4 @@
+
 export const userData = [
     {
       name: 'August',
@@ -28,7 +29,13 @@ export const userData = [
 
 
 export const userRows = [
-    { id: 1, username: 'John Wick', email: "jon@stark.com", status: "active", transaction: "$250.00"},
-    { id: 2, username: 'Duncan Idaho', email: "duneresident.com", status: "active", transaction: "$999.00"}
+  { id: 1, username: 'John Wick', email: "jon@stark.com", status: "active", transaction: "$250.00"},
+  { id: 2, username: 'Duncan Idaho', email: "duneresident.com", status: "active", transaction: "$999.00"}
+
+];
+
+export const productRows = [
+  { id: 1, name: 'SootFlow Surf Board', img:"https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", stock: "5", status: "active", price: "$750.00"},
+  { id: 2, name: 'BodyBoard', img: "https://images.pexels.com/photos/7156886/pexels-photo-7156886.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", stock: "5", status: "active", price: "$61.00"}
 
 ];
