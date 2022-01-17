@@ -106,7 +106,7 @@ const Footer = () => {
       <Center>
         <Title><strong>Contact Us</strong></Title>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> <a href="mailto:sootflowcrafts@test.com" rel="external" target="_blank">sootflowcrafts@test.com</a>
+          <MailOutline style={{marginRight:"10px"}} /> <a href="mailto:sootflowcraft@gmail.com" rel="noreferrer" target="_blank">sootflowcraft@gmail.com</a>
         </ContactItem>
       </Center>
       <Right>
