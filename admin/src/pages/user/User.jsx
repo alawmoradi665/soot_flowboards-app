@@ -1,6 +1,6 @@
 import "./user.css";
 import { Link } from "react-router-dom";
-import { LocationSearching, MailOutline, PermIdentity } from "@material-ui/icons";
+import { LocationSearching, MailOutline, PermIdentity, Publish } from "@material-ui/icons";
 export default function User() {
     return (
         <div className="user">
@@ -31,7 +31,48 @@ export default function User() {
                         </div>
                     </div>
                 </div>
-                <div className="userUpdate"></div>
+                <div className="userUpdate">
+                    <span className="userUpdateTitle">Edit</span>
+                    <form className="userUpdateForm">
+                        <div className="userUpdateInfo">
+                            <div className="userUpdateItem">
+                                <label>Username</label>
+                                <input
+                                type="text"
+                                placeholder="amoradi01"
+                                className="userUpdateInput"
+                                />
+                            </div>
+                            <div className="userUpdateItem">
+                                <label>Full Name</label>
+                                <input
+                                type="text"
+                                placeholder="Alaw Moradi"
+                                className="userUpdateInput"
+                                />
+                            </div>
+                            <div className="userUpdateItem">
+                                <label>Email</label>
+                                <input
+                                type="text"
+                                placeholder="amoradi01@yes.com"
+                                className="userUpdateInput"
+                                />
+                            </div>
+                            <div className="userUpdateItem">
+                                <label>Address</label>
+                                <input
+                                type="text"
+                                placeholder="Sydney, Australia"
+                                className="userUpdateInput"
+                                />
+                            </div>
+                        </div>
+                        <div className="userUpdateSubmit">
+                            <button className="userUpdateButton">Update</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     );
