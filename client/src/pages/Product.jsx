@@ -175,7 +175,7 @@ const Product = () => {
             </Filter>
           </FilterContainer>
           <div>
-            <a className="w-full block bg-teal text-center text-white font-semibold py-3 cursor-pointer duration-300 hover:bg-black" onClick={handleClick}>ADD TO CART</a>
+            <a className="w-full block bg-teal text-center text-white font-semibold py-2 rounded cursor-pointer duration-300 hover:bg-black" onClick={handleClick}>ADD TO CART</a>
           </div>
         </InfoContainer>
       </div>

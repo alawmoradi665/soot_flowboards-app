@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
-import Announcement from "../components/Announcement";
 import Products from "../components/Products";
 import ContactUs from "../components/ContactUs";
 import Footer from "../components/Footer";
@@ -55,7 +54,6 @@ const ProductList = () => {
   return (
     <Container>
       <Navbar />
-      <Announcement />
       <h2 className="p-5 text-3xl font-semibold capitalize">{cat}</h2>
       <FilterContainer>
         <Filter>
