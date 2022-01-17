@@ -1,28 +1,32 @@
-import Topbar from "../src/components/topbar/Topbar";
-import Sidebar from "../src/components/sidebar/Sidebar";
-import "./app.css";
-import UserList from "./pages/userList/UserList";
+import Sidebar from "./components/sidebar/Sidebar";
+import Topbar from "./components/topbar/Topbar";
+import "./App.css";
 import Home from "./pages/home/Home";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import UserList from "./pages/userList/UserList";
 import User from "./pages/user/User";
 import NewUser from "./pages/newUser/NewUser";
-import ProductList from "./pages/products/ProductList";
-import Orders from "./pages/orders/Orders";
+import ProductList from "./pages/productList/ProductList";
 import Product from "./pages/product/Product";
 import NewProduct from "./pages/newProduct/NewProduct";
 import Login from "./pages/login/Login";
+import { useSelector } from "react-redux";
 
 function App() {
-
-  const admin = JSON.parse(JSON.parse(localStorage.getItem("persist:root")).user).currentUser.isAdmin;
+  const user = useSelector((state) => state.user.currentUser);
+  const admin = useSelector((state) => state.user.currentUser.isAdmin);
   return (
     <Router>
-        <Switch>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          {admin && (
-            <>
+      <Switch>
+        <Route path="/login">{user ? <Redirect to="/" /> : <Login />}</Route>
+        {admin && (
+          <>
+          <p>you are admin</p>
             <Topbar />
             <div className="container">
               <Sidebar />
@@ -47,13 +51,10 @@ function App() {
               <Route path="/newproduct">
                 <NewProduct />
               </Route>
-              <Route path="/orders">
-                <Orders />
-              </Route>
             </div>
-            </>)
-          }
-        </Switch>
+          </>
+        )}
+      </Switch>
     </Router>
   );
 }
