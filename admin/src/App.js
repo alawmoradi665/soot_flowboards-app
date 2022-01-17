@@ -4,7 +4,7 @@ import "./app.css";
 import UserList from "./pages/userList/UserList";
 import Home from "./pages/home/Home";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-
+import User from "./pages/user/User";
 
 function App() {
   return (
@@ -20,6 +20,11 @@ function App() {
         <Switch>
           <Route path="/users">
             <UserList />
+          </Route>
+        </Switch>
+        <Switch>
+          <Route path="/user/:userId">
+            <User />
           </Route>
         </Switch>
       </div>
