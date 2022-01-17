@@ -29,7 +29,7 @@ export default function ProductList() {
         },
         {
             field: 'name',
-            headerName: 'Name',
+            headerName: 'name',
             width: 200,
         },
 
