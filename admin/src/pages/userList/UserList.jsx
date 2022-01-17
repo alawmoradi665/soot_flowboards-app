@@ -1,8 +1,16 @@
 import "./userList.css";
 import { DataGrid } from "@material-ui/data-grid";
 import {DeleteOutline} from "@material-ui/icons";
+import {userRows} from "../../sampleData";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
 export default function UserList() {
+    const [data, setData] = useState(userRows);
+    const handleDelete = (id)=>{
+        setData(data.filter(item=>item.id !== id));
+    };
+
     const columns = [
         { 
           field: 'id',
@@ -37,23 +45,19 @@ export default function UserList() {
           renderCell: (params)=>{
               return(
                   <>
-                  <button className="userListEdit">Edit</button>
-                  <DeleteOutline className="delete" />
+                  <Link to={"/user/"+params.row.id}>
+                    <button className="userListEdit">Edit</button>
+                  </Link>
+                  <DeleteOutline className="delete" onClick={()=>handleDelete(params.row.id)} />
                   </>
               )
           }
         },
       ];
-      
-      const rows = [
-        { id: 1, username: 'John Wick', email: "jon@stark.com", status: "active", transaction: "$250.00"},
-        { id: 2, username: 'Duncan Idaho', email: "duneresident.com", status: "active", transaction: "$999.00"}
-
-    ];
     
     return (
         <div className="userList">
-             <DataGrid rows={rows} disableSelectionOnClick columns={columns} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection />
+             <DataGrid rows={data} disableSelectionOnClick columns={columns} pageSize={5} rowsPerPageOptions={[5]} checkboxSelection />
         </div>
     )
 }

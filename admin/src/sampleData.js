@@ -25,3 +25,10 @@ export const userData = [
     },
 ];
 
+
+
+export const userRows = [
+    { id: 1, username: 'John Wick', email: "jon@stark.com", status: "active", transaction: "$250.00"},
+    { id: 2, username: 'Duncan Idaho', email: "duneresident.com", status: "active", transaction: "$999.00"}
+
+];
