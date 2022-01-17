@@ -13,48 +13,48 @@ export default function WidgetSmall() {
                         </span>
                     </div>
                     <button className="widgetButton">
-                        <Visibility />
+                        <Visibility className="Icon"/>
                         Display
                     </button>
                 </li>
                 <li className="widgetListItem">
                     <div className="widgetUser">
                         <span className="widgetUsername">
-                            Sneha Bhamra
+                            Duncan Idaho
                         </span>
                     </div>
                     <button className="widgetButton">
-                        <Visibility />
+                        <Visibility className="Icon"/>
                         Display
                     </button>
                 </li><li className="widgetListItem">
                     <div className="widgetUser">
                         <span className="widgetUsername">
-                            Ethan Worth
+                            John Wick
                         </span>
                     </div>
                     <button className="widgetButton">
-                        <Visibility />
+                        <Visibility className="Icon"/>
                         Display
                     </button>
                 </li><li className="widgetListItem">
                     <div className="widgetUser">
                         <span className="widgetUsername">
-                            Grant Hollingtan
+                            Carol Danvers
                         </span>
                     </div>
                     <button className="widgetButton">
-                        <Visibility />
+                        <Visibility className="Icon"/>
                         Display
                     </button>
                 </li><li className="widgetListItem">
                     <div className="widgetUser">
                         <span className="widgetUsername">
-                            Alaw Moradi
+                            Jim Carrey
                         </span>
                     </div>
                     <button className="widgetButton">
-                        <Visibility />
+                        <Visibility className="Icon" />
                         Display
                     </button>
                 </li>
