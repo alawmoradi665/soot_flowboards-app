@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import Newsletter from "../components/Newsletter";
 import Products from "../components/Products";
 import Slider from "../components/Slider";
+import ContactUs from "../components/ContactUs";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Slider />
       <Categories />
       <Products/>
+      <ContactUs/>
       <Newsletter/>
       <Footer/>
     </div>
